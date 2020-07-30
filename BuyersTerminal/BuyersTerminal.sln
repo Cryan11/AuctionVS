@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyersTerminal", "BuyersTerminal\BuyersTerminal.csproj", "{C8BCD454-913F-4F00-96B1-A18FDC8DC4FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8BCD454-913F-4F00-96B1-A18FDC8DC4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8BCD454-913F-4F00-96B1-A18FDC8DC4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8BCD454-913F-4F00-96B1-A18FDC8DC4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8BCD454-913F-4F00-96B1-A18FDC8DC4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F132FD3-DC98-4B04-A415-02A16E60D6D7}
+	EndGlobalSection
+EndGlobal
