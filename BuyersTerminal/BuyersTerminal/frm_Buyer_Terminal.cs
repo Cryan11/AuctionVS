@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace BuyersTerminal
 {
@@ -42,7 +43,7 @@ namespace BuyersTerminal
                 txt_Buyer_Number.Focus();
             }
 
-            if (Valid_buyer_number(buyernum))
+            if (Valid_buyer_number(true))
             {
                 if (string.IsNullOrEmpty(cutnum))
                 {
@@ -58,24 +59,23 @@ namespace BuyersTerminal
             throw new NotImplementedException();
         }
 
-        private bool Valid_buyer_number(string Buyer_Number)
+        public bool Valid_buyer_number(bool buyernum)
         {
-            string Sql_String = "";
+            Utilities utils = new Utilities();
+            utils.Open("auctiondb");
             long rcount = 0;
-            
-            Sql_String = " SELECT COUNT(*) AS BCOUNT FROM Buyer WHERE Buyer_Number = '" + Buyer_Number + "' ";
-            rcount = Execute_Sql_Return_Long_Field(Sql_String, "BCOUNT")
-            if (rcount > 0)
-                Valid_buyer_number(true);
-            else
-            {
-                Valid_buyer_number(false);
-            }
 
+            MySqlCommand cmd = new MySqlCommand(" SELECT COUNT(*) AS BCOUNT FROM Buyer WHERE Buyer_Number = '" +
+                                                buyernum + "' ");
+            rcount = Execute_Sql_Return_Long_Field(cmd.CommandText, "BCOUNT");
+            Valid_buyer_number(rcount > 0);
 
-            return Valid_buyer_number(buyernum);
+            return buyernum;
         }
 
-      
+        private long Execute_Sql_Return_Long_Field(string cmd, string bcount)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
